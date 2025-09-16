@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prediction</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/s1.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h1 style="padding-top: 15px; padding-bottom: 10px; color: brown;">
+					<b>Your report {{ prediction }} the presence of diabetes.</b>
+				</h1>
+				{% if prediction == 'indicates' %}
+					<h3 style="color: blueviolet;">Prevention Tips:</h3>
+						<p style="padding-top: 10px; padding-bottom: 20px;">A healthy diet, regular physical activity, maintaining a normal body weight and avoiding tobacco
+							 use are ways to prevent or delay the onset of type 2 diabetes. 
+							 Diabetes can be treated and its consequences avoided or delayed with diet, physical activity, medication and regular screening 
+							 and treatment fo	r complications.</p>
+				{% endif %}
+				<button class="btn" onclick="location.href = 'http://127.0.0.1:5000/';"><b>Predict Again</b></button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
